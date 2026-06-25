@@ -1,4 +1,4 @@
-# Tech Layoffs Dashboard 📉
+# Tech Layoffs Dashboard 
 
 A modern, interactive dashboard built with **Dash** and **Plotly** to visualize and analyze global tech layoff trends.
 
@@ -6,7 +6,7 @@ A modern, interactive dashboard built with **Dash** and **Plotly** to visualize 
 ![Python](https://img.shields.io/badge/Python-3.8%2B-blue)
 ![Dash](https://img.shields.io/badge/Dash-Plotly-informational)
 
-## ✨ Features
+##  Features
 
 - **Interactive Filtering:** Filter data dynamically by year using a multi-select dropdown.
 - **KPI Metrics:** Quick insights into Total Layoffs, Companies Affected, and Average Percentage Laid Off.
@@ -15,7 +15,7 @@ A modern, interactive dashboard built with **Dash** and **Plotly** to visualize 
 - **Funding Stage Breakdown:** A donut chart showing the distribution of layoffs across different company funding stages.
 - **Modern UI/UX:** Built with a custom CSS styling featuring a dark theme, glassmorphism cards, and smooth hover animations.
 
-## 📂 Project Structure
+##  Project Structure
 
 ```
 layoffs-dashboard/
@@ -32,7 +32,7 @@ layoffs-dashboard/
 └── README.md                  # Project documentation
 ```
 
-## 🚀 Getting Started
+##  Getting Started
 
 ### Prerequisites
 
@@ -60,12 +60,12 @@ python src/app.py
 
 Open your browser and navigate to `http://127.0.0.1:8050/` to interact with the dashboard.
 
-## 🛠️ Built With
+##  Built With
 
 - [Dash](https://dash.plotly.com/) - The web framework used.
 - [Plotly Express](https://plotly.com/python/plotly-express/) - Used for creating the interactive charts.
 - [Pandas](https://pandas.pydata.org/) - For data manipulation and analysis.
 
-## 📝 License
+##  License
 
 This project is open-source and available under the MIT License.

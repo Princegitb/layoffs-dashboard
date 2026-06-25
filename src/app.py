@@ -65,6 +65,8 @@ app = Dash(
     title="Tech Layoffs Dashboard",
     assets_folder=os.path.join(os.path.dirname(__file__), "assets"),
 )
+server = app.server
+
 
 # ─────────────────────────────────────────────────────────────────────────────
 # LAYOUT

@@ -1,0 +1,237 @@
+/* ── Google Font ─────────────────────────────────────────────────────── */
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@400;500;600;700;800&display=swap');
+
+/* ── CSS Variables ───────────────────────────────────────────────────── */
+:root {
+    --bg-primary:    #0f1117;
+    --bg-secondary:  #1a1d2e;
+    --bg-card:       rgba(30, 34, 54, 0.75);
+    --border-card:   rgba(99, 115, 255, 0.12);
+    --text-primary:  #e8eaf6;
+    --text-secondary:#8892b0;
+    --accent-blue:   #6c63ff;
+    --accent-cyan:   #00d2ff;
+    --accent-pink:   #ff6b9d;
+    --accent-green:  #00e676;
+    --gradient-main: linear-gradient(135deg, #6c63ff 0%, #00d2ff 100%);
+    --shadow-card:   0 8px 32px rgba(0, 0, 0, 0.35);
+    --radius:        14px;
+    --transition:    all 0.3s cubic-bezier(0.25, 0.46, 0.45, 0.94);
+}
+
+/* ── Reset & Base ────────────────────────────────────────────────────── */
+*, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+
+body {
+    font-family: 'Inter', -apple-system, BlinkMacSystemFont, sans-serif;
+    background: var(--bg-primary);
+    color: var(--text-primary);
+    min-height: 100vh;
+    -webkit-font-smoothing: antialiased;
+}
+
+/* ── App Container ───────────────────────────────────────────────────── */
+.app-container {
+    max-width: 1360px;
+    margin: 0 auto;
+    padding: 0 28px 60px;
+}
+
+/* ── Header ──────────────────────────────────────────────────────────── */
+.header {
+    padding: 40px 0 8px;
+    text-align: center;
+}
+
+.header h1 {
+    font-size: 2.4rem;
+    font-weight: 800;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    letter-spacing: -0.5px;
+}
+
+.header p {
+    color: var(--text-secondary);
+    font-size: 0.95rem;
+    margin-top: 6px;
+    font-weight: 400;
+}
+
+/* ── Filter Bar ──────────────────────────────────────────────────────── */
+.filter-bar {
+    display: flex;
+    align-items: center;
+    gap: 14px;
+    margin: 28px 0 32px;
+    padding: 18px 24px;
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius);
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-card);
+    position: relative;
+    z-index: 100;
+    overflow: visible;
+}
+
+.filter-bar label {
+    font-weight: 600;
+    font-size: 0.88rem;
+    color: var(--text-secondary);
+    text-transform: uppercase;
+    letter-spacing: 1px;
+    white-space: nowrap;
+}
+
+/* Dash dropdown overrides */
+.filter-bar .Select-control {
+    background: var(--bg-secondary) !important;
+    border-color: var(--border-card) !important;
+    color: var(--text-primary) !important;
+}
+
+/* Dropdown menu must float above all cards and charts */
+.filter-bar .Select-menu-outer {
+    background: var(--bg-secondary) !important;
+    border-color: var(--border-card) !important;
+    color: var(--text-primary) !important;
+    z-index: 9999 !important;
+    position: absolute !important;
+    overflow: visible !important;
+}
+
+.filter-bar .Select-value-label,
+.filter-bar .Select-placeholder {
+    color: var(--text-primary) !important;
+}
+
+.filter-bar .Select-value {
+    background: var(--accent-blue) !important;
+    border-color: var(--accent-blue) !important;
+    border-radius: 6px !important;
+    color: #fff !important;
+}
+
+.filter-bar .Select-option {
+    background: var(--bg-secondary) !important;
+    color: var(--text-primary) !important;
+}
+
+.filter-bar .Select-option.is-focused {
+    background: rgba(108, 99, 255, 0.25) !important;
+}
+
+.year-dropdown {
+    flex: 1;
+    max-width: 480px;
+}
+
+/* ── KPI Cards Row ───────────────────────────────────────────────────── */
+.kpi-row {
+    display: grid;
+    grid-template-columns: repeat(3, 1fr);
+    gap: 22px;
+    margin-bottom: 32px;
+}
+
+.kpi-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius);
+    padding: 28px 24px 24px;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-card);
+    text-align: center;
+    transition: var(--transition);
+    position: relative;
+    overflow: hidden;
+}
+
+.kpi-card::before {
+    content: '';
+    position: absolute;
+    top: 0; left: 0; right: 0;
+    height: 3px;
+    border-radius: var(--radius) var(--radius) 0 0;
+}
+
+.kpi-card:nth-child(1)::before { background: var(--gradient-main); }
+.kpi-card:nth-child(2)::before { background: linear-gradient(90deg, var(--accent-pink), #ff8a65); }
+.kpi-card:nth-child(3)::before { background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan)); }
+
+.kpi-card:hover {
+    transform: translateY(-4px);
+    box-shadow: 0 12px 40px rgba(108, 99, 255, 0.18);
+    border-color: rgba(108, 99, 255, 0.3);
+}
+
+.kpi-label {
+    font-size: 0.78rem;
+    font-weight: 600;
+    text-transform: uppercase;
+    letter-spacing: 1.2px;
+    color: var(--text-secondary);
+    margin-bottom: 10px;
+}
+
+.kpi-value {
+    font-size: 2.6rem;
+    font-weight: 800;
+    background: var(--gradient-main);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+    line-height: 1.1;
+}
+
+.kpi-card:nth-child(2) .kpi-value {
+    background: linear-gradient(90deg, var(--accent-pink), #ff8a65);
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+.kpi-card:nth-child(3) .kpi-value {
+    background: linear-gradient(90deg, var(--accent-green), var(--accent-cyan));
+    -webkit-background-clip: text;
+    -webkit-text-fill-color: transparent;
+    background-clip: text;
+}
+
+/* ── Chart Cards ─────────────────────────────────────────────────────── */
+.charts-grid {
+    display: grid;
+    grid-template-columns: 1fr;
+    gap: 22px;
+}
+
+.charts-grid-2col {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 22px;
+}
+
+.chart-card {
+    background: var(--bg-card);
+    border: 1px solid var(--border-card);
+    border-radius: var(--radius);
+    padding: 24px;
+    backdrop-filter: blur(12px);
+    box-shadow: var(--shadow-card);
+    transition: var(--transition);
+}
+
+.chart-card:hover {
+    border-color: rgba(108, 99, 255, 0.22);
+    box-shadow: 0 12px 40px rgba(0, 0, 0, 0.4);
+}
+
+/* ── Responsive ──────────────────────────────────────────────────────── */
+@media (max-width: 900px) {
+    .kpi-row { grid-template-columns: 1fr; }
+    .charts-grid-2col { grid-template-columns: 1fr; }
+    .header h1 { font-size: 1.8rem; }
+}

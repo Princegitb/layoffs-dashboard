@@ -39,7 +39,7 @@ def style_figure(fig):
         legend=dict(bgcolor="rgba(0,0,0,0)"),
     )
     return fig
------------------------------------------------
+
 app = Dash(
     __name__,
     title="Tech Layoffs Dashboard",

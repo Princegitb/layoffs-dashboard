@@ -89,41 +89,54 @@ body {
 }
 
 /* Dash dropdown overrides */
+/* Dash dropdown overrides for true black-and-white theme */
 .filter-bar .Select-control {
-    background: var(--bg-secondary) !important;
-    border-color: var(--border-card) !important;
-    color: var(--text-primary) !important;
-}
-
-/* Dropdown menu must float above all cards and charts */
-.filter-bar .Select-menu-outer {
-    background: var(--bg-secondary) !important;
-    border-color: var(--border-card) !important;
-    color: var(--text-primary) !important;
-    z-index: 9999 !important;
-    position: absolute !important;
-    overflow: visible !important;
-}
-
-.filter-bar .Select-value-label,
-.filter-bar .Select-placeholder {
-    color: var(--text-primary) !important;
-}
-
-.filter-bar .Select-value {
-    background: #262626 !important;
-    border-color: #404040 !important;
-    border-radius: 6px !important;
+    background-color: #121212 !important;
+    border: 1px solid #262626 !important;
     color: #ffffff !important;
 }
 
-.filter-bar .Select-option {
-    background: var(--bg-secondary) !important;
-    color: var(--text-primary) !important;
+/* Ensure select inputs, values, and text are white on dark background */
+.filter-bar .Select-value,
+.filter-bar .Select-value-label,
+.filter-bar .Select-placeholder,
+.filter-bar .Select-input,
+.filter-bar .Select-input > input {
+    background-color: transparent !important;
+    color: #ffffff !important;
 }
 
-.filter-bar .Select-option.is-focused {
-    background: rgba(255, 255, 255, 0.08) !important;
+.filter-bar .Select-value {
+    background-color: #262626 !important;
+    border: 1px solid #404040 !important;
+    border-radius: 4px !important;
+    margin: 2px !important;
+}
+
+/* Dropdown arrow and clear buttons */
+.filter-bar .Select-arrow-zone,
+.filter-bar .Select-clear-zone {
+    color: #a3a3a3 !important;
+    background-color: transparent !important;
+}
+
+/* Dropdown option menu lists */
+.filter-bar .Select-menu-outer {
+    background-color: #121212 !important;
+    border: 1px solid #262626 !important;
+    color: #ffffff !important;
+    z-index: 9999 !important;
+}
+
+.filter-bar .Select-option {
+    background-color: #121212 !important;
+    color: #ffffff !important;
+}
+
+.filter-bar .Select-option.is-focused,
+.filter-bar .Select-option:hover {
+    background-color: #262626 !important;
+    color: #ffffff !important;
 }
 
 .year-dropdown {

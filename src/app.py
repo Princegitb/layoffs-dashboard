@@ -20,9 +20,16 @@ CHART_FONT = dict(family="Inter, sans-serif", color="#e8eaf6")
 CHART_MARGINS = dict(l=30, r=30, t=50, b=30)
 GRIDCOLOR = "rgba(255,255,255,0.06)"
 
+# Colour palette for charts
 PALETTE = [
-    "#ffffff", "#f5f5f5", "#e5e5e5", "#d4d4d4", "#a3a3a3",
-    "#737373", "#525252", "#404040", "#262626", "#171717"
+    "#ffffff",  # White
+    "#262626",  # Dark charcoal
+    "#e5e5e5",  # Light grey
+    "#525252",  # Medium dark grey
+    "#a3a3a3",  # Medium light grey
+    "#171717",  # Very dark charcoal
+    "#d4d4d4",  # Silvery grey
+    "#737373",  # Medium grey
 ]
 
 
@@ -227,6 +234,7 @@ def update_dashboard(selected_years):
         textposition="inside",
         textinfo="percent+label",
         hovertemplate="%{label}<br>%{value:,} layoffs<br>%{percent}<extra></extra>",
+        marker=dict(line=dict(color="#121212", width=3))  # 3px border matching card bg
     )
     style_figure(fig_stage)
     fig_stage.update_layout(height=480)

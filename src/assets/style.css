@@ -139,6 +139,20 @@ body {
     color: #ffffff !important;
 }
 
+.year-dropdown,
+.year-dropdown .Select-control,
+.year-dropdown .Select-placeholder,
+.year-dropdown .Select-value,
+.year-dropdown .Select-value-zone,
+.year-dropdown .Select-multi-value-wrapper,
+.year-dropdown .Select-input,
+.year-dropdown .Select-input input {
+    background-color: #121212 !important;
+    background: #121212 !important;
+    color: #ffffff !important;
+    border-color: #262626 !important;
+}
+
 .year-dropdown {
     flex: 1;
     max-width: 480px;

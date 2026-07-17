@@ -21,8 +21,8 @@ CHART_MARGINS = dict(l=30, r=30, t=50, b=30)
 GRIDCOLOR = "rgba(255,255,255,0.06)"
 
 PALETTE = [
-    "#6c63ff", "#00d2ff", "#ff6b9d", "#00e676", "#ff8a65",
-    "#ab47bc", "#42a5f5", "#ffd54f", "#26c6da", "#ec407a",
+    "#ffffff", "#f5f5f5", "#e5e5e5", "#d4d4d4", "#a3a3a3",
+    "#737373", "#525252", "#404040", "#262626", "#171717"
 ]
 
 
@@ -158,12 +158,12 @@ def update_dashboard(selected_years):
         ts, x="date", y="total_laid_off",
         title="Monthly Layoffs Over Time",
         labels={"date": "", "total_laid_off": "Layoffs"},
-        color_discrete_sequence=["#6c63ff"],
+        color_discrete_sequence=["#ffffff"],
     )
     fig_ts.update_traces(
         line=dict(width=2.5),
         fill="tozeroy",
-        fillcolor="rgba(108, 99, 255, 0.15)",
+        fillcolor="rgba(255, 255, 255, 0.07)",
     )
     style_figure(fig_ts)
 
@@ -183,7 +183,7 @@ def update_dashboard(selected_years):
         title="Top 10 Industries by Layoffs",
         labels={"total_laid_off": "Total Layoffs", "industry": ""},
         color="total_laid_off",
-        color_continuous_scale=["#6c63ff", "#00d2ff"],
+        color_continuous_scale=["#262626", "#ffffff"],
     )
     fig_ind.update_layout(coloraxis_showscale=False)
     style_figure(fig_ind)
@@ -204,7 +204,7 @@ def update_dashboard(selected_years):
         title="Top 10 Countries by Layoffs",
         labels={"total_laid_off": "Total Layoffs", "country": ""},
         color="total_laid_off",
-        color_continuous_scale=["#ff6b9d", "#ff8a65"],
+        color_continuous_scale=["#404040", "#e5e5e5"],
     )
     fig_ctry.update_layout(coloraxis_showscale=False)
     style_figure(fig_ctry)

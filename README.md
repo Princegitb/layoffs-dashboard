@@ -13,7 +13,7 @@ A modern, interactive dashboard built with **Dash** and **Plotly** to visualize 
 - **Time-Series Analysis:** A sleek area chart showing monthly layoffs over time.
 - **Industry & Country Insights:** Horizontal bar charts highlighting the top 10 most affected industries and countries.
 - **Funding Stage Breakdown:** A donut chart showing the distribution of layoffs across different company funding stages.
-- **Modern UI/UX:** Built with a custom CSS styling featuring a dark theme, glassmorphism cards, and smooth hover animations.
+- **Modern UI/UX:** Clean, minimalist monochrome styling featuring stark black backgrounds, sharp border cards, and custom-styled grayscale interactive charts.
 
 ##  Project Structure
 
